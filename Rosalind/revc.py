@@ -3,6 +3,7 @@
 path = "revcdata.txt"
 def comp(path):
     seq = []
+    final = []
     with open(path) as file:
         for line in file:
             for i in range(len(line)):
@@ -15,8 +16,11 @@ def comp(path):
                     seq.insert(0, "G")
                 elif x == "G":
                     seq.insert(0, "C")
+                elif x == "\n":
+                    break
                 else:
                     return "Error in sequence at position " + str(i)
-    return "".join(seq)
-  
+            final.append("".join(seq))
+
+    return "\n".join(final)
 print(comp(path))
