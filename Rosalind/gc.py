@@ -10,7 +10,7 @@ def GCprocess(dna):
 #I introduced the wrangle funtion to manipulate the data, no matter how dna string is divided among newlines, as long as the same structure of FASTA is maintained.
 #wrangle will ouput a dictionary, whose keys are the IDs and values are the GC percentages.
 
-path = "data.txt"
+path = "gcdata.txt"
 def wrangle(path):
     keydict = {}
     valdict = {}
